@@ -1,0 +1,3 @@
+photo_path: templates/assets/     #照片存储路径，注意不能出现转义符\ 要以/结尾
+launchPort: 14500                 #后端监听端口，1024-65535间
+debug: 0                          #是否开启flask调试模式

@@ -1,0 +1,2 @@
+getBingImages(["./assets/indexbg.jpg"])
+getbgImages(["./assets/bg.jpg"])

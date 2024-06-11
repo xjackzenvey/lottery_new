@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>No Ending</title>
+	<link href="./assets/Pio-master/static/pio.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="./assets/sakana.min.css">
+	<style type="text/css">
+		.demo{padding: 2em 0;}
+		.our-team{
+		    padding: 30px 0 40px;
+		    /*background: #f7f5ec;
+			background-image: url("./assets/bg.jpg");
+			background-size: cover;*/
+		    text-align: center;
+		    overflow: hidden;
+		    position: relative;
+		}
+
+		.our-team::after{
+			content: '';
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			/*background: url("./assets/bg.jpg");
+			/*backdrop-filter: blur(100px);*/
+			background: #2a313867;
+			background-size: cover;
+			opacity: 0.5;
+			z-index: -98;
+		}
+		.container::after{
+			content: '';
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url("./assets/bg.jpg");
+			backdrop-filter: blur(100px);
+			background-size: cover;
+			opacity: 0.65;
+			z-index: -100;
+		}
+		.our-team .pic{
+		    display: inline-block;
+		    width: 130px;
+		    height: 130px;
+		    margin-bottom: 50px;
+		    z-index: 1;
+		    position: relative;
+		}
+		.htmleaf-header{
+			visibility: hidden;
+		}
+		
+	
+		.our-team .pic:after{
+		    content: "";
+		    width: 100%;
+		    height: 100%;
+		    border-radius: 50%;
+		    /*background: #ee4266;*/
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: -1;
+		}
+		.our-team .pic img{
+			text-align: center;
+		    width: 130%;
+		    height: auto;
+			max-height: 150%;
+		    border-radius: 50%;
+		    transform: scale(1);
+		    transition: all 0.9s ease 0s;
+		}
+
+		.our-team .team-content{ margin-bottom: 30px; }
+		.our-team .title{
+			margin-top: 60px;
+		    font-size: 30px;
+		    font-weight: 700;
+		    color: #4e5052;
+		    letter-spacing: 3px;
+		    text-transform: capitalize;
+		    margin-bottom: 7px;
+		    transition: all 0.9s ease 0s;
+			transform: scale(1);
+		}
+		.our-team .post{
+		    /*display: block;*/
+			visibility: hidden;
+		    font-size: 15px;
+		    color: #4e5052;
+		    text-transform:capitalize;
+		}
+		.our-team .social{
+		    width: 100%;
+		    padding: 0;
+		    margin: 0;
+		    background: #eb1768;
+		    position: absolute;
+		    bottom: -100px;
+		    left: 0;
+		    transition: all 0.5s ease 0s;
+		}
+		.our-team:hover .social{ bottom: 0; }
+		.our-team .social li{ display: inline-block; }
+		.our-team .social li a{
+		    display: block;
+		    padding: 10px;
+		    font-size: 17px;
+		    color: #fff;
+		    transition: all 0.3s ease 0s;
+		}
+		.our-team .social li a:hover{
+		    color: #eb1768;
+		    background: #f7f5ec;
+		}
+		@media only screen and (max-width: 990px){
+		    .our-team{ margin-bottom: 30px; }
+		}
+		#sakana-widget{
+			position: absolute;
+			margin-top:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<div id="takeup">
+				<br>
+				<br>
+			</div>
+		</header>
+		<div class="demo">
+		        <div class="container">
+					
+		            <div class="row-md-12 row-sm-12">
+		                
+		                <div class="col-md-8 col-sm-12">
+		                    <div class="our-team">
+		                        <div class="pic">
+		                            <img src="/assets/logo.jpg" id="photo">
+		                        </div>
+		                        <div class="team-content">
+		                            <h3 class="title" id="nbox">点击此处开始抽奖哦！</h3>
+		                            <Span class="post">1</Span>
+		                        </div>
+		                        <ul class="social">
+		                         
+		                        </ul>
+		                    </div>
+		                </div>
+						<!--<div class="col-md-4 col-sm-4">
+							<div id="description"></div>
+							<br><br><br><br>
+							<div id="sakana-widget"></div>-->
+							<div class="pio-container right">
+								<div class="pio-action"></div>
+								<canvas id="pio" width="360" height="700"></canvas>
+							</div>
+						<!--</div>-->
+		               
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		
+	</div>
+	
+</body>
+
+<script src="./assets/Pio-master/static/l2d.js"></script>
+<script src="./assets/Pio-master/static/pio.js"></script>
+
+</script>
+<script src="./jq.js"></script>
+<script src="./logic.js"></script>
+<script>
+	document.querySelector(".our-team").addEventListener("click",function(){
+		console.log('click');
+		openindex(-1);
+	})
+
+
+</script>
+<!--<script async onload="initSakanaWidget()" src="./assets/sakana.min.js"></script>-->
+</html>
